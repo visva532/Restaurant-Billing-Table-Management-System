@@ -1,0 +1,56 @@
+.cashflow-page {
+  background-color: #000;
+  color: gold;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.cashflow-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid gold;
+  padding-bottom: 10px;
+}
+
+.cashflow-header h1 {
+  font-size: 2rem;
+  color: gold;
+}
+
+.logout-btn {
+  background-color: #ff3333;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.logout-btn:hover {
+  background-color: #cc0000;
+}
+
+.cashflow-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.cashflow-table th,
+.cashflow-table td {
+  border: 1px solid gold;
+  padding: 10px;
+  text-align: center;
+}
+
+.cashflow-table th {
+  background-color: gold;
+  color: black;
+}
+
+.cashflow-table tr:nth-child(even) {
+  background-color: rgba(255, 215, 0, 0.1);
+}

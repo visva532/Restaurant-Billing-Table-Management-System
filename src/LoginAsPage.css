@@ -1,0 +1,157 @@
+/* Full page layout */
+.loginas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle at center, #111 0%, #000 100%);
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+}
+
+/* Box container */
+.loginas-box {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 40px 50px;
+  border-radius: 20px;
+  border: 2px solid gold;
+  box-shadow: 0px 10px 30px rgba(255, 215, 0, 0.4);
+  text-align: center;
+  animation: fadeIn 0.8s ease-in;
+  max-width: 350px;
+  width: 100%;
+}
+
+/* Logo area */
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.logo-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(255,215,0,0.6) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  filter: blur(20px);
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+.restaurant-logo {
+  width: 150px;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  border-radius: 50%;
+  border: 3px solid gold;
+  box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.8);
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Title & subtitle */
+.loginas-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: gold;
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+
+.loginas-subtitle {
+  font-size: 16px;
+  color: #d4af37;
+  margin-bottom: 25px;
+}
+
+/* Buttons */
+.loginas-btn {
+  display: block;
+  width: 100%;
+  margin: 12px auto;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid gold;
+  border-radius: 12px;
+  cursor: pointer;
+  background: transparent;
+  color: gold;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.loginas-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: gold;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.loginas-btn:hover::before {
+  left: 0;
+}
+
+.loginas-btn:hover {
+  color: black;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.7);
+}
+
+/* Animation effects */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.7;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .loginas-box {
+    padding: 30px 20px;
+  }
+  .restaurant-logo {
+    width: 120px;
+  }
+  .loginas-title {
+    font-size: 26px;
+  }
+  .loginas-btn {
+    font-size: 16px;
+    padding: 12px;
+  }
+}

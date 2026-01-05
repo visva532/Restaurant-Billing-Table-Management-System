@@ -1,0 +1,283 @@
+.product-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  color: gold;
+  z-index: 1;
+}
+
+/* Background Image Styling */
+.product-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("foods.jpg") center/cover no-repeat;
+  filter: blur(6px);
+  opacity: 1.25;
+  z-index: -1;
+}
+
+/* Navbar */
+.product-navbar {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(17, 17, 17, 0.85);
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-left button {
+  background: transparent;
+  border: none;
+  color: gold;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.nav-left button:hover {
+  background: rgba(255, 215, 0, 0.2);
+}
+
+.nav-left .active {
+  border-bottom: 2px solid gold;
+}
+
+.nav-right button {
+  background: linear-gradient(45deg, red, darkred);
+  border: none;
+  color: white;
+  padding: 6px 14px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.nav-right button:hover {
+  transform: scale(1.05);
+}
+
+/* Product Grid */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 10px;
+  justify-content: flex-start;
+}
+
+.product-card {
+  background: rgba(34, 34, 34, 0.9);
+  border: 1px solid gold;
+  border-radius: 10px;
+  width: 200px;
+  min-height: 300px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.placeholder-img {
+  width: 100%;
+  height: 130px;
+  background: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 6px;
+}
+
+/* Stylish Quantity Controls */
+.qty-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.qty-control button {
+  background: linear-gradient(45deg, #ffd700, #ffb400);
+  border: none;
+  padding: 5px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: transform 0.2s;
+}
+
+.qty-control button:hover {
+  transform: scale(1.1);
+}
+
+.qty-control span {
+  margin: 0 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Stylish Add / Remove Buttons */
+.add-btn {
+  background: linear-gradient(45deg, green, darkgreen);
+  border: none;
+  color: white;
+  padding: 6px;
+  margin-top: 5px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.add-btn:hover {
+  transform: scale(1.05);
+}
+
+.remove-btn {
+  background: linear-gradient(45deg, #8b0000, #b22222);
+  border: none;
+  color: white;
+  padding: 6px;
+  margin-top: 5px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.remove-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Add Product */
+.add-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(51, 51, 51, 0.8);
+  border: 1px dashed gold;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.upload-btn {
+  cursor: pointer;
+  color: gold;
+  padding: 10px;
+}
+
+#file-upload {
+  display: none;
+}
+
+/* Cart Section */
+.cart-section {
+  padding: 10px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(51, 51, 51, 0.85);
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 6px;
+}
+
+/* Stylish Place Order Button */
+.place-order-btn {
+  background: linear-gradient(45deg, #ff7f50, #ff4500);
+  color: white;
+  padding: 12px;
+  border: none;
+  margin-top: 12px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.3s;
+  width: 200px;
+}
+
+.place-order-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #ff6347, #e63900);
+}
+
+/* Success Page */
+.success-page {
+  background-color: black;
+  text-align: center;
+  padding: 50px;
+  color: gold;
+}
+
+
+
+.success-page button {
+  background: linear-gradient(45deg, #ffd700, #ffb400);
+  border: none;
+  padding: 12px 24px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.success-page button:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-grid {
+    justify-content: center;
+  }
+
+  .product-card,
+  .add-product {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card,
+  .add-product {
+    width: 100%;
+  }
+
+  .nav-left button {
+    margin-bottom: 5px;
+  }
+}

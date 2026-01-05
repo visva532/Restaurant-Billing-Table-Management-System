@@ -1,0 +1,56 @@
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1a1a1a; /* Dark black background */
+}
+
+.login-container {
+  background: #2d2d2d; /* Slightly lighter black for container */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); /* Gold shadow for elegance */
+  text-align: center;
+  width: 300px;
+  border: 2px solid #ffd700; /* Gold border */
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #ffd700; /* Gold text for heading */
+  font-family: 'Georgia', serif; /* Vintage font */
+  text-shadow: 1px 1px 3px #000; /* Subtle shadow for depth */
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ffd700; /* Gold border for inputs */
+  border-radius: 4px;
+  background-color: #333; /* Dark gray background for inputs */
+  color: #ffd700; /* Gold text */
+  outline: none;
+}
+
+.login-container input::placeholder {
+  color: #aaa; /* Lighter text for placeholder */
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #ffd700; /* Gold button */
+  color: #1a1a1a; /* Black text on button */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #e6c200; /* Slightly darker gold on hover */
+}

@@ -1,0 +1,382 @@
+.table-page {
+  display: flex;
+  flex-direction: column;
+  color: gold;
+  min-height: 100vh;
+  background: url("./Logo 1.png") center center / contain no-repeat, white;
+  background-color: white;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.table-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.header-bar,
+.floor-buttons,
+.content-section,
+.stats-bar {
+  position: relative;
+  z-index: 1;
+}
+
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: rgba(17, 17, 17, 0.8);
+  align-items: center;
+}
+
+.nav-tabs button {
+  background: transparent;
+  color: gold;
+  border: none;
+  margin: 0 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.nav-tabs .active {
+  border-bottom: 2px solid gold;
+}
+
+.floor-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.floor-buttons button {
+  background: transparent;
+  border: 1px solid black;
+  color: black;
+  padding: 5px 10px;
+  margin: 0 5px;
+}
+
+.floor-buttons .active {
+  background: gold;
+  color: black;
+}
+
+.content-section {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  flex: 1;
+}
+
+.tables-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex: 2;
+  max-height: calc(100vh - 220px);
+  overflow-y: auto;
+}
+
+.table-card {
+  background: rgba(34, 34, 34, 0.85);
+  border: 1px solid gold;
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.table-card.free {
+  border-color: green;
+}
+
+.table-card.not_paid {
+  border-color: orange;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.take-order-btn {
+  background: green;
+  color: white;
+  border: none;
+  padding: 5px;
+  width: 100%;
+}
+
+.pay-btn {
+  background: orange;
+  color: white;
+  border: none;
+  padding: 5px;
+  width: 100%;
+}
+
+.notifications-section {
+  background: rgba(17, 17, 17, 0.85);
+  border: 0.5px solid gold;
+  padding: 10px;
+  flex: 1;
+  max-height: calc(100vh - 180px);
+  overflow-y: auto;
+}
+
+.stats-bar {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background: rgba(17, 17, 17, 0.8);
+}
+
+/* Orders tab styles */
+.orders-tab {
+  padding: 20px;
+  background: rgba(17, 17, 17, 0.85);
+  flex: 1;
+  overflow-y: auto;
+}
+
+.order-card {
+  border: 1px solid gold;
+  background: rgba(34, 34, 34, 0.85);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+.order-card h3 {
+  margin: 0;
+  color: gold;
+}
+
+.order-card h4 {
+  margin: 10px 0 5px;
+  color: white;
+}
+
+.order-card ul {
+  margin: 0;
+  padding-left: 20px;
+  color: white;
+}
+
+.order-card p {
+  margin: 5px 0;
+  color: white;
+}
+
+/* Notifications tab styles */
+.notifications-tab {
+  padding: 20px;
+  background: rgba(17, 17, 17, 0.85);
+  flex: 1;
+  overflow-y: auto;
+}
+
+.notifications-tab h2 {
+  color: gold;
+  text-align: center;
+}
+
+.notifications-tab h3 {
+  color: gold;
+  margin-top: 20px;
+}
+
+/* Modal Styles */
+.payment-modal,
+.upi-modal,
+.bill-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-content,
+.upi-content,
+.bill-content {
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  text-align: center;
+  color: #ffd700;
+  max-width: 90%;
+  width: 500px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.payment-content h2,
+.upi-content h2,
+.bill-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.payment-button {
+  padding: 15px 30px;
+  margin: 15px;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 200px;
+}
+
+.upi-btn {
+  background: linear-gradient(45deg, #ffd700, #ffaa00);
+  color: #1a1a1a;
+}
+
+.upi-btn:hover {
+  background: linear-gradient(45deg, #ffaa00, #ffd700);
+  transform: translateY(-3px);
+}
+
+.cash-btn {
+  background: linear-gradient(45deg, #d4af37, #b8860b);
+  color: #fff;
+}
+
+.cash-btn:hover {
+  background: linear-gradient(45deg, #b8860b, #d4af37);
+  transform: translateY(-3px);
+}
+
+.upi-qr {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px 0;
+  border: 5px solid #ffd700;
+  border-radius: 10px;
+  padding: 10px;
+  background: #fff;
+}
+
+.confirm-btn {
+  padding: 15px 30px;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #ffd700, #ffaa00);
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.confirm-btn:hover {
+  background: linear-gradient(45deg, #ffaa00, #ffd700);
+  transform: translateY(-3px);
+}
+
+.bill-content p,
+.bill-content h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.bill-content ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin: 15px 0;
+}
+
+.bill-content li {
+  padding: 5px 10px;
+  background: rgba(255, 215, 0, 0.1);
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.bill-action-btn {
+  padding: 12px 25px;
+  margin: 10px;
+  font-size: 1.3em;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #ffd700, #d4af37);
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bill-action-btn:hover {
+  background: linear-gradient(45deg, #d4af37, #ffd700);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .table-page {
+    flex-direction: column;
+  }
+  .content-section {
+    flex-direction: column;
+  }
+  .tables-grid {
+    max-height: none;
+  }
+  .payment-content,
+  .upi-content,
+  .bill-content {
+    padding: 20px;
+    width: 80%;
+  }
+
+  .payment-content h2,
+  .upi-content h2,
+  .bill-content h2 {
+    font-size: 2em;
+  }
+
+  .payment-button,
+  .confirm-btn,
+  .bill-action-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    width: 150px;
+  }
+
+  .upi-qr {
+    max-width: 200px;
+  }
+}

@@ -1,0 +1,85 @@
+.chief-order-container {
+  background-color: #000;
+  color: gold;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.chief-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid gold;
+  padding-bottom: 10px;
+}
+
+.chief-header h1 {
+  font-size: 2rem;
+  color: gold;
+}
+
+.chief-header-buttons button {
+  margin-left: 10px;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.logout-btn {
+  background-color: #ff3333;
+  color: white;
+}
+
+.logout-btn:hover {
+  background-color: #cc0000;
+}
+
+.end-session-btn {
+  background-color: gold;
+  color: black;
+}
+
+.end-session-btn:hover {
+  background-color: #e6c300;
+}
+
+.orders-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.orders-table th,
+.orders-table td {
+  border: 1px solid gold;
+  padding: 10px;
+  text-align: center;
+}
+
+.orders-table th {
+  background-color: gold;
+  color: black;
+}
+
+.orders-table tr:nth-child(even) {
+  background-color: rgba(255, 215, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .orders-table th, .orders-table td {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .chief-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .chief-header-buttons {
+    margin-top: 10px;
+  }
+}

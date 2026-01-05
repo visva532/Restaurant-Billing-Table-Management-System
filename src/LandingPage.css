@@ -1,0 +1,113 @@
+.landing-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.landing-left {
+  background-color: gold;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.logo-box {
+  text-align: center;
+}
+
+.logo-img {
+  max-width: 220px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.logo-subtitle {
+  font-size: 18px;
+  color: black;
+  margin-top: 10px;
+}
+
+.company-text {
+  margin-top: 10px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: black;
+}
+
+.landing-right {
+  background-color: black;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-box {
+  border: 2px solid #e17739;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+}
+
+.welcome-box h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+}
+
+.dine-in {
+  background-color: transparent;
+  border-color: #e17739;
+  color: white;
+}
+
+.dine-in:hover {
+  background-color: #e17739;
+}
+
+.takeaway {
+  background-color: transparent;
+  border-color: white;
+  color: white;
+}
+
+.takeaway:hover {
+  background-color: white;
+  color: #5e7b52;
+}
+
+@media (max-width: 768px) {
+  .landing-container {
+    flex-direction: column;
+  }
+  .landing-left,
+  .landing-right {
+    flex: unset;
+    height: 50vh;
+  }
+  .logo-img {
+    max-width: 150px;
+  }
+}
